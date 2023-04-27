@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html land=en-US>
+<html land=en-US xmlns="http://www.w3.org/1999/html">
 
 <head>
     <meta charset="UTF-8">
@@ -50,11 +50,102 @@
     <div class="columns" style="margin-left:25px;margin-right:25px;margin-top:10px;">
         <div class="column is-1"></div>
         <div class="column is-10">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.</p>
+            <div class="block">
+                <h2 class="title is-2">WPILib Installation Guide</h2>
+                <div class="block">
+                    <p>
+                        This guide is intended for Java and C++ teams. LabVIEW teams can skip to Installing LabVIEW for FRC
+                        (LabVIEW only). Additionally, the below tutorial shows Windows 10, but the steps are identical for all
+                        operating systems. Notes differentiating operating systems will be shown.
+                    </p>
+                </div>
+            </div>
+            <div class="block">
+                <h3 class="title is-3">Prerequisites</h3>
+                <div class="block">
+                    <p><strong>Supported OSs and Architectures</strong></p>
+                    <div style="margin-left:10px;margin-top:5px;">
+                        <p>Windows 10 & 11, 64 bit only. 32 bit and Arm are not supported</p>
+                        <p style="margin-top:3px;">Ubuntu 22.04, 64 bit. Other Linux distributions with glibc >= 2.34 may work, but are unsupported</p>
+                        <p style="margin-top:3px;">macOS 11 or higher, both Intel and Arm</p>
+                    </div>
+                </div>
+                <div class="block">
+                    <article class="message is-warning" style="margin-top:25px;">
+                        <div class="message-header">
+                            <p>&#x26A0; Warning</p>
+                        </div>
+                        <div class="message-body">
+                            <p>
+                                The following OSes are no longer supported: macOS 10.15, Ubuntu 18.04 & 20.04, Windows 7,
+                                Windows 8.1, and any 32-bit Windows.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+                <div class="block">
+                    <p>
+                        WPILib is designed to install to different folders for different years, so that it is not necessary to
+                        uninstall a previous version before installing this year’s WPILib.
+                    </p>
+                </div>
+            </div>
+            <div class="block">
+                <h3 class="title is-3">Downloading</h3>
+                <div class="block">
+                    <span>The downloads for WPILib can be found on their GitHub:</span>
+                    <a href="https://github.com/wpilibsuite/allwpilib/releases/"
+                    >https://github.com/wpilibsuite/allwpilib/releases/</a>
+                </div>
+            </div>
+            <div class="block">
+                <h3 class="title is-3">Extracting the Installer</h3>
+                <div class="block">
+                    <span>When you download the WPILib installer, it is distributed as a disk image file </span>
+                    <code>.iso</code><span> for Windows, </span><code>.tar.gz</code>
+                    <span> for Linux, and distributed as a </span><code>DMG</code><span> for MacOS.</span>
+                </div>
+                <div class="box">
+                    <h4 class="title is-4">Windows</h4>
+                    <div class="block">
+                        <span>Windows 10+ users can right click on the downloaded disk image and select </span>
+                        <code>Mount</code><span> to open it. Then launch </span><code>WPILibInstaller.exe</code>
+                        <span>.</span>
+                    </div>
+                    <div class="block">
+                        <article class="message is-info">
+                            <div class="message-header">
+                                <p>Info</p>
+                            </div>
+                            <div class="message-body">
+                                <span>Other installed programs may associate with iso files and the </span>
+                                <code>mount</code><span> option may not appear. If that software does not give the
+                                option to mount or extract the isfile, then follow the directions below.</span>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="block">
+                        <span>You can use </span><a href="https://www.7-zip.org/" target="_blank">7-zip</a>
+                        <span> to extract the disk image by right-clicking, selecting </span><code>7-Zip</code>
+                        <span> and selecting </span><code>Extract to…</code><span> Windows 11 users may need to
+                        select </span><code>Show more options</code><span> at the bottom of the context menu.</span>
+                        <span> After opening the </span><code>.iso</code><span> file, launch the installer by
+                        opening </span><code>WPILibInstaller.exe</code><span>.</span>
+                    </div>
+                    <div class="block">
+                        <article class="message is-info">
+                            <div class="message-header">
+                                <p>Info</p>
+                            </div>
+                            <div class="message-body">
+                                <span>After launching the installer, Windows may display a window titled “Windows
+                                    protected your PC”. Click </span><code>More info</code><span>, then select</span>
+                                <code>Run anyway</code><span> to run the installer.</span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="column is-1"></div>
     </div>
