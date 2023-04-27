@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html land=en-US xmlns="http://www.w3.org/1999/html">
+<html lang="en-US" xmlns="http://www.w3.org/1999/html">
 
 <head>
     <meta charset="UTF-8">
@@ -28,26 +28,28 @@
             <a class="has-text-dark mr-6" href="resources.html">Resources</a>
         </div>
     </div>
-    <div class="columns" style="margin-left:25px;margin-right:25px;margin-top:50px;">
-        <div class="column is-one-third" style="text-align:center;">
-            <a href="https://docs.wpilib.org/en/stable/docs/zero-to-robot/step-2/wpilib-setup.html" target="_blank">
-                <img src="https://code.visualstudio.com/assets/images/code-stable.png" alt="vscode logo" width="180px">
-            </a>
-            <!--
-            <p><br></p>
-            <div>
-                <a href="https://docs.wpilib.org/en/stable/docs/zero-to-robot/step-2/wpilib-setup.html" target="_blank">WPILib Website</a>
+    <div class="block">
+        <div class="columns" style="margin-left:25px;margin-right:25px;margin-top-50px;">
+            <div class="column is-one-third" style="text-align:center;">
+                <a href="https://docs.wpilib.org/en/stable/docs/zero-to-robot/step-2/wpilib-setup.html" target="_blank">
+                    <img src="https://code.visualstudio.com/assets/images/code-stable.png" alt="vscode logo" width="180px">
+                </a>
+                <!--
+                <p><br></p>
+                <div>
+                    <a href="https://docs.wpilib.org/en/stable/docs/zero-to-robot/step-2/wpilib-setup.html" target="_blank">WPILib Website</a>
+                </div>
+                -->
             </div>
-            -->
-        </div>
-        <div class="column is-half" style="text-align:center;">
-            <span class="title is-1"><br>WPILib Visual Studio Code</span>
-        </div>
-        <div class="has-text-dark">
-            <p style="font-family: 'Times New Roman', Times, serif;"></p>
+            <div class="column is-half" style="text-align:center;">
+                <span class="title is-1"><br>WPILib Visual Studio Code</span>
+            </div>
+            <div class="has-text-dark">
+                <p style="font-family: 'Times New Roman', Times, serif;"></p>
+            </div>
         </div>
     </div>
-    <div class="columns" style="margin-left:25px;margin-right:25px;margin-top:10px;">
+    <div class="columns" style="margin-left:25px;margin-right:25px;">
         <div class="column is-1"></div>
         <div class="column is-10">
             <div class="block">
@@ -71,7 +73,7 @@
                     </ul>
                 </div>
                 <div class="block">
-                    <article class="message is-warning" style="margin-top:25px;">
+                    <article class="message is-warning">
                         <div class="message-header">
                             <p>&#x26A0; Warning</p>
                         </div>
@@ -153,6 +155,154 @@
                             release. This can be done by running </span><code>xcode-select --install</code>
                             <span> in the Terminal.</span>
                     </div>
+                    <div class="block">
+                        <span>MacOS users can double click on the downloaded </span><code>DMG</code>
+                        <span> and then select </span><code>WPILibInstaller</code>
+                        <span> to launch the application.</span>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4 class="title is-4">Linux</h4>
+                    <div class="block">
+                        <span>Linux users should extract the downloaded </span><code>.tar.gz</code>
+                        <span> and then launch </span><code>WPILibInstaller</code><span> Ubuntu treats executables in
+                        the file explorer as shared libraries, so double-clicking won’t run them. Run the following
+                        commands in a terminal instead with </span><code>&lt;version&gt;</code>
+                        <span>replaced with the version you’re installing.</span>
+                    </div>
+                    <div class="block">
+                        <code>
+                            $ tar -xf WPILib_Linux-&lt;version&gt;.tar.gz <br>&nbsp;$ cd WPILib_Linux-&lt;version&gt;
+                            /&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+                            &nbsp;$ ./WPILibInstaller&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </code>
+                    </div>
+                </div>
+            </div>
+            <div class="block">
+                <h3 class="title is-3">Running the Installer</h3>
+                <div class="block">
+                    <span>When you download the WPILib installer, it is distributed as a disk image file </span>
+                    <code>.iso</code><span> for Windows, </span><code>.tar.gz</code>
+                    <span> for Linux, and distributed as a </span><code>DMG</code><span> for MacOS.</span>
+                </div>
+                <div class="block">
+                    <p>This showcases a list of options included with the WPILib installation.</p>
+                </div>
+                <div class="block content">
+                    <ul>
+                        <li>
+                            <code>Tools Only</code><span> installs just the WPILib tools (Pathweaver, Shuffleboard,
+                            RobotBuilder, SysID, Glass, and OutlineViewer) and JDK.</span>
+                        </li>
+                        <li>
+                            <code>Everything</code><span> installs the full development environment (VS Code,
+                            extensions, all dependencies), WPILib tools, and JDK.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="block">
+                    <span>You will notice two buttons, </span><code>Install for this User</code><span> and </span>
+                    <code>Install for all Users</code><span>. </span><code>Install for this User</code>
+                    <span> only installs it on the current user account, and does not require administrator
+                        privileges. However, </span><code>Install for all Users</code><span> installs the tools for
+                    all system accounts and will require administrator access. </span><code>Install for all Users</code>
+                    <span> is not an option for macOS and Linux.</span>
+                </div>
+                <div class="block">
+                    <article class="message is-info">
+                        <div class="message-header">
+                            <p>Info</p>
+                        </div>
+                        <div class="message-body">
+                            <p>
+                                If you select Install for all Users, Windows will prompt for administrator access
+                                through UAC during installation.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+                <div class="block">
+                    <p>
+                        Select the option that is appropriate for you, and you’ll presented with the following
+                        installation screen.
+                    </p>
+                </div>
+                <div class="block">
+                    <p>
+                        This next screen involves downloading VS Code. Unfortunately, due to licensing reasons, VS Code
+                        can not be bundled with the installer.
+                    </p>
+                </div>
+                <div class="block content">
+                    <ul>
+                        <li>Download for this computer only</li>
+                        <ul>
+                            <li>
+                                This downloads VS Code only for the current platform, which is also the smallest
+                                download.
+                            </li>
+                        </ul>
+                        <li>Skip and don’t use VS Code</li>
+                        <ul>
+                            <li>
+                                Skips installing VS Code. Useful for advanced installations or configurations. Generally
+                                not recommended.
+                            </li>
+                        </ul>
+                        <li>Select existing VS Code zip for offline install on this computer</li>
+                        <ul>
+                            <li>
+                                Selecting this option will bring up a prompt allowing you to select a pre-existing zip
+                                file of VS Code that has been downloaded by the installer previously. This option does not
+                                let you select an already installed copy of VS Code on your machine.
+                            </li>
+                        </ul>
+                        <li>Create VS Code zip to share with other computers/OSes for offline install</li>
+                        <ul>
+                            <li>
+                                This option downloads and saves a copy of VS Code for all platforms, which is useful for
+                                sharing the copy of the installer.
+                            </li>
+                        </ul>
+                    </ul>
+                </div>
+                <div class="block">
+                    <span>Go ahead and select </span><code>Download for this computer only</code>
+                    <span>
+                        . This will begin the download process and can take a bit depending on internet connectivity
+                        (it’s ~100MB).Once the download is done, select
+                    </span><code>Next</code>
+                    <span>. You should be presented with a screen that looks similar to the one below.</span>
+                </div>
+                <div class="block">
+                    <p>After installation is complete, you will be presented with the finished screen.</p>
+                </div>
+                <div class="block">
+                    <article class="message is-success">
+                        <div class="message-header">
+                            <p>Important</p>
+                        </div>
+                        <div class="message-body">
+                            <span>
+                                WPILib installs a separate version of VS Code. It does not use an already existing
+                                installation. Each year has it’s own copy of the tools appended with the year. IE: </span>
+                            <code>WPILib VS Code 2022</code>
+                            <span>. Please launch the WPILib VS Code and not a system installed copy!</span>
+                        </div>
+                    </article>
+                </div>
+                <div class="block">
+                    <p>
+                        Congratulations, the WPILib development environment and tooling is now installed on your
+                        computer! Press Finish to exit the installer.
+                    </p>
+                </div>
+            </div>
+            <div class="block">
+                <h3 class="title is-h3">Post-Installation</h3>
+                <div class="block">
+                    <p>Some operating systems require some final action to complete installation.</p>
                 </div>
             </div>
         </div>
