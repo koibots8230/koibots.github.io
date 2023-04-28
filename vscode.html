@@ -9,43 +9,39 @@
 </head>
 
 <body>
-    <div class="box">
-        <div class="title is-3">
-            <div class="has-text-centered">
-                <div class="media-center">
-                    <figure class=" image is-128x128 is-inline-block">
-                        <img src="images/logo.png" alt="Image">
-                    </figure>
-                    <p>VSCode</p>
+    <div class="block">
+        <div class="box">
+            <div class="title is-3">
+                <div class="has-text-centered">
+                    <div class="media-center">
+                        <figure class=" image is-128x128 is-inline-block">
+                            <img src="images/logo.png" alt="Image">
+                        </figure>
+                        <p>VSCode</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <hr/>
-        <div class="title is-6 has-text-centered">
-            <a class="has-text-dark mr-6" href="index.html">Home</a>
-            <a class="has-text-dark mr-6" href="http://test">Git</a>
-            <a class="has-text-dark mr-6" href="vscode.html">VSCode</a>
-            <a class="has-text-dark mr-6" href="resources.html">Resources</a>
+            <hr/>
+            <div class="title is-6 has-text-centered">
+                <a class="has-text-dark mr-6" href="index.html">Home</a>
+                <a class="has-text-dark mr-6" href="http://test">Git</a>
+                <a class="has-text-dark mr-6" href="vscode.html">VSCode</a>
+                <a class="has-text-dark mr-6" href="resources.html">Resources</a>
+            </div>
         </div>
     </div>
     <div class="block">
-        <div class="columns" style="margin-left:25px;margin-right:25px;margin-top-50px;">
+        <div class="columns" style="margin-left:25px;margin-right:25px;margin-top:40`px;">
             <div class="column is-one-third" style="text-align:center;">
                 <a href="https://docs.wpilib.org/en/stable/docs/zero-to-robot/step-2/wpilib-setup.html" target="_blank">
                     <img src="https://code.visualstudio.com/assets/images/code-stable.png" alt="vscode logo" width="180px">
                 </a>
-                <!--
-                <p><br></p>
-                <div>
-                    <a href="https://docs.wpilib.org/en/stable/docs/zero-to-robot/step-2/wpilib-setup.html" target="_blank">WPILib Website</a>
-                </div>
-                -->
             </div>
             <div class="column is-half" style="text-align:center;">
                 <span class="title is-1"><br>WPILib Visual Studio Code</span>
             </div>
             <div class="has-text-dark">
-                <p style="font-family: 'Times New Roman', Times, serif;"></p>
+                <p style="font-family:'Times New Roman',Times,serif;"></p>
             </div>
         </div>
     </div>
@@ -172,9 +168,10 @@
                     </div>
                     <div class="block">
                         <code>
-                            $ tar -xf WPILib_Linux-&lt;version&gt;.tar.gz <br>&nbsp;$ cd WPILib_Linux-&lt;version&gt;
-                            /&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-                            &nbsp;$ ./WPILibInstaller&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            $&nbsp;tar&nbsp;-xf&nbsp;WPILib_Linux-&lt;version&gt;.tar.gz&nbsp;<br>&nbsp;$&nbsp;cd&nbsp;
+                            WPILib_Linux-&lt;version&gt;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;<br>&nbsp;$&nbsp;./WPILibInstaller&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </code>
                     </div>
                 </div>
@@ -334,6 +331,160 @@
                             on Linux and macOS.</span>
                         </div>
                     </article>
+                </div>
+            </div>
+            <div class="block">
+                <h3 class="title is-h3">Additional C++ Installation for Simulation</h3>
+                <div class="block">
+                    <span>C++ robot simulation requires that a native compiler to be installed. For Windows,
+                        this would be </span><a href="https://visualstudio.microsoft.com/vs/">Visual Studio 2022</a>
+                    <span> (<strong>not</strong> VS Code), macOS requires </span>
+                    <a href="https://apps.apple.com/us/app/xcode/id497799835">Xcode 13 or later</a>
+                    <span>, and Linux (Ubuntu) requires the </span><code>build-essential</code><span> package.</span>
+                </div>
+                <div class="block">
+                    <span>Ensure the </span><code>Desktop Development with C++</code>
+                    <span> option is checked in the Visual Studio installer for simulation support.</span>
+                </div>
+            </div>
+            <div class="block">
+                <h3 class="title is-h3">What is Installed?</h3>
+                <div class="block">
+                    <p>The Offline Installer installs the following components:</p>
+                </div>
+                <div class="block content">
+                    <ul>
+                        <li>
+                            <p>
+                                <strong>Visual Studio Code</strong> - The supported IDE for 2019 and later robot code
+                                development. The offline installer sets up a separate copy of VS Code for WPILib
+                                development, even if you already have VS Code on your machine. This is done because
+                                some of the settings that make the WPILib setup work may break existing workflows if
+                                you use VS Code for other projects.
+                            </p>
+                        </li>
+                        <li>
+                            <p><strong>C++ Compiler</strong> - The toolchains for building C++ code for the roboRIO</p>
+                        </li>
+                        <li>
+                            <p>
+                                <strong>Gradle</strong> - The specific version of Gradle used for building/deploying
+                                C++ or Java robot code
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <strong>Java JDK/JRE</strong> - A specific version of the Java JDK/JRE that is used to
+                                build Java robot code and to run any of the Java based Tools (Dashboards, etc.). This
+                                exists side by side with any existing JDK installs and does not overwrite the
+                                JAVA_HOME variable
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <strong>WPILib Tools</strong> - SmartDashboard, Shuffleboard, RobotBuilder, Outline
+                                Viewer, Pathweaver, Glass, SysID
+                            </p>
+                        </li>
+                        <li>
+                            <p><strong>WPILib Dependencies</strong> - OpenCV, etc.</p>
+                        </li>
+                        <li>
+                            <p>
+                                <strong>VS Code Extensions</strong> - WPILib extensions for robot code development in
+                                VS Code
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="block">
+                <h3 class="title is-h3">Uninstalling</h3>
+                <div class="block">
+                    <p>
+                        WPILib is designed to install to different folders for different years, so that it is not
+                        necessary to uninstall a previous version before installing this year’s WPILib. However, the
+                        following instructions can be used to uninstall WPILib if desired.
+                    </p>
+                </div>
+                <div class="block">
+                    <span>Ensure the </span><code>Desktop Development with C++</code>
+                    <span> option is checked in the Visual Studio installer for simulation support.</span>
+                </div>
+                <div class="box">
+                    <h4 class="title is-4">Windows</h4>
+                    <div class="block content">
+                        <ol>
+                            <li>
+                                <span>Delete the appropriate wpilib folder (</span>
+                                <code>C:\Users\Public\wpilib\YYYY</code><span> where </span><code>YYYY</code>
+                                <span> is the year to uninstall)</span>
+                            </li>
+                            <li>
+                                <span>Delete the desktop icons at </span><code>C:\Users\Public\Public Desktop</code>
+                            </li>
+                            <li>
+                                <p>Delete the path environment variables.</p>
+                            </li>
+                            <ol>
+                                <li>
+                                    <p>
+                                        In the start menu, type environment and select “edit the system environment
+                                        variables”
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>Click on the environment variables button (1).</p>
+                                </li>
+                                <li>
+                                    <p>In the user variables, select path (2) and then click on edit (3).</p>
+                                </li>
+                                <li>
+                                    <span>Select the path with </span><code>roborio\bin</code>
+                                    <span> (4) and click on delete (5).</span>
+                                </li>
+                                <li>
+                                    <span>Select the path with </span><code>frccode</code>
+                                    <span> and click on delete (5).</span>
+                                </li>
+                                <li>
+                                    <p>Repeat steps 3-6 in the Systems Variable pane.</p>
+                                </li>
+                            </ol>
+                        </ol>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4 class="title is-4">MacOS</h4>
+                    <div class="block content">
+                        <ol>
+                            <li>
+                                <span>Delete the appropriate wpilib folder (</span><code>~/wpilib/YYYY</code>
+                                <span> where </span><code>YYYY</code><span> is the year to uninstall)</span>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4 class="title is-4">Linux</h4>
+                    <div class="block content">
+                        <ol>
+                            <li>
+                                <span>Delete the appropriate wpilib folder (</span><code>~/wpilib/YYYY</code>
+                                <span> where </span><code>YYYY</code><span> is the year to uninstall). eg </span>
+                                <code>rm -rf ~/wpilib/YYYY</code>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="block">
+                <h3 class="title is-3">Troubleshooting</h3>
+                <div class="block">
+                    <span>In case the installer fails, please open an issue on the installer repository. A link is
+                        available </span><a href="https://github.com/wpilibsuite/wpilibinstaller-avalonia">here</a>
+                    <span>. The installer should give a message on the cause of the error, please include this in the
+                        description of your issue.</span>
                 </div>
             </div>
         </div>
