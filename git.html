@@ -55,7 +55,7 @@
                 <div class="block">
                     <p>
                         When making digital projects, espicaly with other people, you should have a way to easly remotly store the projects and see the version history.
-                        Git is an open source software that allows for the this. If you when git to store your project remotly, you need a git server.
+                        Git is an open source software that allows for the this, and stores each project to "repositories". If you when git to store your project remotly, you need a git server.
                         You can host your own git server or use a public one.
                         Github is the most popular public git service.
                     </p>
@@ -63,6 +63,24 @@
                     <br><br>
                 <h2 class="title is-2">Github Setup</h2>
                 <p>
-                    Go to <a href="github.com">github.com</a> and sign up. 
+                    Go to <a href="github.com">github.com</a> and sign up. Click you profile > Go to settings > Click SSH and GPG keys > Click new SSH key.
                 </p>
-            </div>
+                <br>
+                <p>
+                    In terminal, paste this with your email:
+                </p>
+                <div class="box">
+                    ssh-keygen -t ed25519 -C "your_email@example.com"
+                <br>
+                    cat ~/.ssh/id_ed25519.pub
+                </div>
+                <p>
+                    You can put in all the defults by clicking enter.
+                    <br>
+                    Paste the key into add new and add a title. Finaly, click add key.
+                    <br>
+                    <br>
+                    This will allow you to change github repos on tied with your github account on the computer the ssh is associated with. To change repos for koibots, you will need to joun the github organization.
+                    Ask to be invited, and accept the invintation to koibots. Now you can edit the repos.
+                </p>
+            <div>
