@@ -12,55 +12,128 @@
     <script src='scripts/header-small.js'></script>
     <div class="block">
         <div class="columns" style="margin-left:25px;margin-right:25px;margin-top:40`px;">
-            <div class="column is-half image is-64x64 ml-6" style="text-align:center;">
+            <div class="column" style="text-align:center;">
                 <a href="https://docs.wpilib.org/en/stable/docs/zero-to-robot/step-2/wpilib-setup.html" target="_blank">
-                    <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--oVyFGbtN--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/7ce4oq75sia6ni6q46s3.png" alt="vscode logo" width="180px">
+                    <img
+                        src="https://res.cloudinary.com/practicaldev/image/fetch/s--oVyFGbtN--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/7ce4oq75sia6ni6q46s3.png"
+                        alt="vscode logo"
+                        width="70%"
+                    >
                 </a>
             </div>
-            <div class="column is-one-third" style="text-align:center;">
-                <br><br><br>
+            <div class="column">
                 <span class="title is-1"><br>Git and GitHub Tutorial</span>
-            </div>
-            <div class="has-text-dark">
-                <p style="font-family:'Times New Roman',Times,serif;"></p>
             </div>
         </div>
     </div>
-    <br><br><br><br><br>
     <div class="columns" style="margin-left:25px;margin-right:25px;">
         <div class="column is-1"></div>
         <div class="column is-10">
             <div class="block">
-                <h2 class="title is-2">Intro</h2>
                 <div class="block">
-                    <p>
-                        When making digital projects, espicaly with other people, you should have a way to easly remotly store the projects and see the version history.
-                        Git is an open source software that allows for the this, and stores each project to "repositories". If you when git to store your project remotly, you need a git server.
-                        You can host your own git server or use a public one.
-                        Github is the most popular public git service.
-                    </p>
+                    <h2 class="title is-2">Intro</h2>
                     <div class="block">
-                    <br><br>
-                <h2 class="title is-2">Github Setup</h2>
-                <p>
-                    Go to <a href="github.com">github.com</a> and sign up. Click you profile > Go to settings > Click SSH and GPG keys > Click new SSH key.
-                </p>
-                <br>
-                <p>
-                    In terminal, paste this with your email:
-                </p>
-                <div class="box">
-                    ssh-keygen -t ed25519 -C "your_email@example.com"
-                <br>
-                    cat ~/.ssh/id_ed25519.pub
+                        <p>
+                            When making digital projects, especially with other people, you should have a way to easily
+                            remotely store the projects and see the version history. Git is an open source software that
+                            allows for this. It stores each project in a repository (repo). If you when git to store your
+                            project remotely, you need a git server. You can host your own git server or use a public one.
+                            GitHub is the most popular public git service.
+                        </p>
+                    </div>
                 </div>
-                <p>
-                    You can put in all the defults by clicking enter.
-                    <br>
-                    Paste the key into add new and add a title. Finaly, click add key.
-                    <br>
-                    <br>
-                    This will allow you to change github repos on tied with your github account on the computer the ssh is associated with. To change repos for koibots, you will need to joun the github organization.
-                    Ask to be invited, and accept the invintation to koibots. Now you can edit the repos.
-                </p>
-            <div>
+                <div class="block">
+                    <h2 class="title is-2">Github Setup</h2>
+                    <div class="block">
+                        <h3 class="title is-3">SSH Keys</h3>
+                        <div class="block">
+                            <div class="block">
+                                <p>
+                                    Go to <a href="https://github.com">github.com</a> and sign up. Click you profile > Go
+                                    to settings > Click SSH and GPG keys > Click new SSH key.
+                                </p>
+                            </div>
+                            <div class="block">
+                                <p>
+                                    In terminal, paste this with your email:
+                                </p>
+                            </div>
+                            <div class="box">
+                                <code>ssh-keygen -t ed25519 -C "your_email@example.com"</code><br>
+                                <code>cat ~/.ssh/id_ed25519.pub</code>
+                            </div>
+                            <div class="block">
+                                <p>
+                                    You can put in all the defaults by clicking enter. Paste the key into add new and add a
+                                    title. Finally, click add key.
+                                </p>
+                            </div>
+                            <div class="block">
+                                <p>
+                                    This will allow you to change GitHub repos on tied with your GitHub account on the
+                                    computer the ssh is associated with. To change repos for KoiBots, you will need to join
+                                    the GitHub organization. Ask to be invited, and accept the invitation to KoiBots.
+                                    Now you can edit the repos.
+                                </p>
+                            </div>
+                        </div>
+                        <h3 class="title is-3">Cloning Repos</h3>
+                        <div class="block">
+                            <div class="block">
+                                <p>
+                                    To be able to edit a repo, you have to clone it first. To clone a repo use the
+                                    following command:
+                                </p>
+                            </div>
+                            <div class="box">
+                                <code>git clone "git@github.com:user-name/repo-name.git"</code>
+                            </div>
+                            <div class="block">
+                                <p>To clone the repo this website is in use:</p>
+                            </div>
+                            <div class="box">
+                                <code>git clone "git@github.com:koibots8230/koidocs.git"</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="block">
+                    <h2 class="title is-2">Making Changes</h2>
+                    <div class="block">
+                        <div class="block">
+                            <p>
+                                When you want to add file to the git server there is a process that needs to be
+                                followed. The steps are as following: add, commit, push.
+                            </p>
+                            <h3>Adding</h3>
+                            <div class="block">
+                                <p>
+                                    Instructions for adding
+                                </p>
+                            </div>
+                            <h3>Committing</h3>
+                            <div class="block">
+                                <p>
+                                    Instructions for committing
+                                </p>
+                            </div>
+                            <h3>Pushing</h3>
+                            <div class="block">
+                                <p>
+                                    Instructions for pushing
+                                </p>
+                                <h4>If the push fails</h4>
+                                <div class="block">
+                                    <p>
+                                        Instructions for merging
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column is-1"></div>
+    </div>
+</body>
